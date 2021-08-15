@@ -1,0 +1,526 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+:root{
+    --bodyback: hsl(212,40%,95%);
+    --cat: .9em;
+    --medium: 1.2em;
+    --dog: 1.5em;
+    --elephant:2em;
+    --darkback: hsl(212,15%,35%);
+    --shadow:  0px 2px 2px hsl(212,12%,90%);
+    --skycolor:#46dbc9;
+    --border: 1px solid red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+     
+}
+body{
+    height: 100vh;
+    background: var(--bodyback); 
+    scroll-behavior: smooth;
+}
+.logo{
+    color: var(--skycolor);
+    font-size: var(--medium);
+    font-family: 'Poiret One', cursive;
+    position: relative;
+    left: 10px;
+}
+.logo h1{
+    font-family: 'Poiret One', cursive;
+
+}
+header{
+    padding: 1em;
+    background: hsl(212,30%,95%);
+}
+.change.active{
+    background: var(--darkback);
+}
+
+
+
+.btn{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 11;
+}
+.btn div{
+    width: 55%;
+    height: 1px;
+    background: var(--skycolor);
+    margin: .5em auto;
+}
+header ul{
+    position: relative;
+    top: 10px;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+.list.active{
+    height: 155.35px;
+}
+
+header ul li {
+    list-style: none;
+    margin: .8em 0;
+    transition: .61s ease-in-out;
+    position: relative;
+    left: 12px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: var(--skycolor);
+    letter-spacing: 1px;
+    font-family: monospace;
+    font-size: var(--dog);
+    position: relative;
+}
+header ul li a::before{
+    content: '';
+    position: absolute;
+    background: #46dbc9;
+    top: 110%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scale(0,1);
+    transition: 350ms ease;
+}
+header ul li a:hover:before{
+    content: '';
+    position: absolute;
+    background: #46dbc9;
+    top: 110%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scale(1,1);
+    transition: 350ms ease;
+    transform-origin: center;
+}
+.one.active{
+    transform: rotate(50deg);
+    transition: .5s ease;
+    transform-origin: top;
+    top: 3px;
+    left: 2px;
+    
+}
+.two.active{
+    transform: rotate(-60deg);
+    transform-origin: bottom;
+    bottom: 5px;
+    left: 4px;
+}
+.three.active{
+    display: none;
+}
+.one,
+.two,
+.three{
+    transform: rotate(0);
+    transition: .5s ease;
+    position: relative;
+}
+
+.mainheader{
+    padding:1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.content{
+    margin-top: var(--elephant);
+    line-height: 1.6;
+}
+.content h2{
+    margin: 1em 0; 
+}
+.content p{
+    font-size: var(--cat);
+}
+.content a{
+    display: inline-block;
+    margin-top: 1.2em;
+    text-decoration: none;
+    color: var(--darkback);
+    font-weight: 800;
+    font-size: var(--cat);
+    border: 1px solid var(--darkback);
+    border-radius: 150px;
+    padding: .2em 1.5em;
+    outline: none;
+    background: var(--skycolor);
+
+}
+.content a:hover{
+    background: 0;
+}
+
+.mainheader img{
+    width: 70%;
+}
+.container{
+    padding: var(--dog);
+}
+.box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2.5em 0 0 0;
+    transform: translateY(150px);
+    transition: 1s ease;
+    opacity: 0;
+}
+.box.active{
+    transform: translateY(0);
+    opacity: 1;
+
+}
+.serviceinfo{
+    position: relative;
+    top: 20px;
+}
+.serviceinfo h3{
+font-size: var(--medium);
+margin: .51em 0;
+color:#3fb1b5;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: 400;
+
+
+}
+.serviceinfo p{
+    font-size: .85em;
+    color: hsl(200,35%,25%);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+.association{
+    padding: 5em 0;
+    background: hsla(212,10%,65%,.1);
+    position: relative;
+    margin-top: 1em;
+}
+.companies{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5em 1em;
+}
+
+.companies i{
+    font-size: 2em;
+    color: hsl(212,10%,65%);
+}
+.box img{
+    filter: drop-shadow(5px 10px 10px #333);
+}
+
+footer{
+    display: grid;
+    padding: 1.5em 1em ;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    gap: 2em;
+    justify-content: center;
+    background: hsl(212,15%,85%);
+}
+footer li {
+    list-style: none;
+    margin: .51em 0;
+}
+footer li a{
+    text-decoration: none;
+    color: var(--darkback);
+    font-weight: 600;
+    color: hsl(213.3, 15.1%, 35.1%);;
+    font-size: .8em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    transition: .5s ease;
+}
+footer li a:hover{
+    color: black;
+}
+footer h3{
+    margin-bottom: .7em;
+    font-size: .85em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: hsl(212,20%,32%);
+}
+.about{
+    grid-column: 1/-1;
+    color: hsl(213.3, 15.1%, 35.1%);;
+    line-height: 1.5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about h3{
+    font-size: 1.2em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+}
+.about p{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: var(--cat);
+}
+
+
+.contact{
+    grid-column: 1/3;
+}
+
+
+
+@media (min-width:400px){
+    .association{
+        position: relative;
+        margin-top: 1em;
+    }
+    .companies{
+        padding: .51em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em 0;
+    }
+    
+    .companies i{
+        font-size: 4em;
+        color: hsl(212,10%,65%);
+    }
+    .serviceinfo h3{
+        font-size: 1.65em;
+    }
+.logo h1{
+    font-size: 1.8em;
+}    
+    
+}
+@media (min-width:500px) {
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+    .serviceinfo h3{
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width:700px){
+   .btn{
+       display: none;
+   }
+    .listsection{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    header ul{
+        height: auto;
+        overflow: visible;
+        position: static;
+    }
+    
+}
+
+@media (min-width:700px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em;
+    }
+    
+    header ul li {
+        display: inline-block;
+        margin-right: 1.5em;
+    }
+    header ul li a{
+        font-size: 1.35em;
+    }
+    .mainheader{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+                  
+    }
+    .mainheader img{
+        filter: drop-shadow(10px 10px 15px black);
+        width: 40%;
+    }
+
+    .content{
+        position: relative;
+         width: 50%;
+         text-align: left;
+         padding: 1em;
+         margin:0;
+    }
+.content h2{
+    font-size: var(--dog);
+    margin-bottom:0.5em;
+    line-height: 1.3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: var(--skycolor);
+
+}
+.content p{
+    font-size: var(--cat);
+    margin: .7em 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content a{
+margin-top: 1em;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+}
+.box img{
+    max-width: 55%;
+    justify-content: center;
+    filter: drop-shadow(5px 10px 15px #333);
+    transition: 350ms ease;
+
+}
+
+.box img:hover{
+    filter: drop-shadow(10px 15px 20px #000);
+}
+.box:nth-child(2),
+.box:nth-child(4),
+.box:nth-child(6)
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+.serviceinfo{
+    text-align: left;
+    padding: 1em;
+    line-height: 1.6;
+}
+.box:nth-child(2) .serviceinfo,
+.box:nth-child(4) .serviceinfo,
+.box:nth-child(6) .serviceinfo
+{
+    text-align: left;
+     position: relative;
+     left: 50px;
+}
+
+.serviceinfo h3{
+    font-size: 1.8em;
+    line-height: 1.2;
+}
+.serviceinfo p{
+    font-size: 1.1em;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 1fr;
+}
+.about{
+    grid-column: 1/2    ;
+}
+
+.contact{
+    grid-column: 2/3;
+}   
+.logo{
+    position: relative;
+    left: 20px;
+    font-family: 'Poiret One', cursive;
+}
+.logo h1{
+    font-family: 'Poiret One', cursive;
+
+}
+
+}
+
+@media (max-width:300px) {
+    .logo{
+        font-size: .7em;
+    }
+    .btn{
+        top: 17px;
+        right: 2px;
+    }
+    .btn > div{
+        width: 25px;
+        margin: .35em;
+    }
+    
+}
+
+@media (min-width:900px){
+    header ul li{
+        margin-right: 3.5em;
+    }
+
+    .content h2{
+        font-size: 2.2em;
+    }
+    .content p{
+        font-size: 1.1em;
+    }
+    .logo{
+        left: 30px;
+        font-family: 'Poiret One', cursive;
+    }
+    
+}
+@media (min-width:1000px){
+    header ul li{
+        margin-right: 5.5em;
+    }
+    header ul li a{
+        font-size: var(--dog);
+    }
+    .serviceinfo h3{
+        font-size: 2.2em;
+    }
+    .serviceinfo p{
+        font-size: 1.1em;
+    }
+    .logo{
+        left: 35px;
+    }
+    .logo h1{
+        font-family: 'Poiret One', cursive;
+        
+    }
+    .association{
+        padding: 5em 0;
+        background: hsla(212,10%,65%,.1);
+    }
+
+}
