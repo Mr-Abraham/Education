@@ -31,3 +31,16 @@ function reveal(){
         }
     }
 }
+
+// if you want to make
+
+// var interval = setInterval(() => {
+//     var img = document.getElementById('image');
+
+//     var images = ['./images/3.svg','./images/2.svg'];
+
+//     var random = images[Math.floor(Math.random() * 2)];
+
+//     img.src = random
+
+// }, 2000);

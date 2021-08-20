@@ -1,5 +1,7 @@
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
 :root{
     --bodyback: hsl(212,40%,95%);
@@ -17,24 +19,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-     
+    font-family: 'Raleway', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     height: 100vh;
     background: var(--bodyback); 
     scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
 }
 .logo{
     color: var(--skycolor);
-    font-size: var(--medium);
-    font-family: 'Poiret One', cursive;
+    font-size: var(--cat);
     position: relative;
     left: 10px;
 }
 .logo h1{
-    font-family: 'Poiret One', cursive;
-
+    font-family: 'Raleway', sans-serif;
+     
 }
 header{
     padding: 1em;
@@ -190,9 +194,10 @@ header ul li a:hover:before{
     align-items: center;
     text-align: center;
     margin: 2.5em 0 0 0;
-    transform: translateY(150px);
-    transition: 1s ease;
+    transform: translateY(200px);
+    transition: .8s ease-in-out;
     opacity: 0;
+
 }
 .box.active{
     transform: translateY(0);
@@ -207,16 +212,16 @@ header ul li a:hover:before{
 font-size: var(--medium);
 margin: .51em 0;
 color:#3fb1b5;
-font-family: Georgia, 'Times New Roman', Times, serif;
 font-weight: 400;
+font-family: 'Raleway', sans-serif;
 
 
 }
 .serviceinfo p{
     font-size: .85em;
     color: hsl(200,35%,25%);
-    font-family:Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
+
 }
 
 .association{
